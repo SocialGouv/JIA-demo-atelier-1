@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TerriTest : testez un territoire avant de vous y installer. Un séjour d’essai de 2 à 3 semaines pour décider sereinement. Dispositif d’expérimentation.">
+  <title>TerriTest — Testez un territoire avant de vous y installer</title>
+
+  <!-- Système de Design de l’État (DSFR) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/utility/utility.min.css">
+  <link rel="stylesheet" href="assets/custom.css">
+</head>
+<body>
+
+  <!-- Liens d’évitement (RGAA) -->
+  <div class="fr-skiplinks">
+    <nav class="fr-container" role="navigation" aria-label="Accès rapide">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Contenu</a></li>
+        <li><a class="fr-link" href="#simulateur">Simulateur d’éligibilité</a></li>
+        <li><a class="fr-link" href="#footer">Pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- ============================ EN-TÊTE ============================ -->
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-header-menu" aria-haspopup="menu" id="button-menu" title="Menu">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="#contenu" title="Accueil — TerriTest, séjour d’essai territorial">
+                <p class="fr-header__service-title">TerriTest</p>
+              </a>
+              <p class="fr-header__service-tagline">Séjour d’essai territorial</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a class="fr-btn fr-icon-calculator-line fr-btn--icon-left" href="#simulateur">Tester mon éligibilité</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-header-menu" aria-labelledby="button-menu">
+      <div class="fr-container">
+        <button class="fr-btn--close fr-btn" aria-controls="modal-header-menu" title="Fermer">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+        <nav class="fr-nav" id="navigation-principale" role="navigation" aria-label="Menu principal">
+          <ul class="fr-nav__list">
+            <li class="fr-nav__item"><a class="fr-nav__link" href="#etapes">Comment ça marche</a></li>
+            <li class="fr-nav__item"><a class="fr-nav__link" href="#simulateur">Tester mon éligibilité</a></li>
+            <li class="fr-nav__item"><a class="fr-nav__link" href="#portes">Participer</a></li>
+            <li class="fr-nav__item"><a class="fr-nav__link" href="#faq">Questions fréquentes</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu" role="main">
+
+    <!-- ============================ HERO (F1) ============================ -->
+    <section class="tt-hero fr-py-8w" aria-labelledby="tt-hero-titre">
+      <div class="fr-container">
+        <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+          <div class="fr-col-12 fr-col-md-7">
+            <p class="fr-badge fr-badge--info fr-badge--no-icon fr-mb-2w">Dispositif en expérimentation</p>
+            <h1 id="tt-hero-titre">Testez un territoire avant de vous y installer</h1>
+            <p class="fr-text--lead">
+              Le séjour d’essai territorial vous permet de vivre 2 à 3 semaines dans un territoire d’accueil,
+              de découvrir le quotidien, les services et les opportunités — puis de décider, sans vous engager.
+            </p>
+            <ul class="fr-btns-group fr-btns-group--inline-md fr-mt-3w">
+              <li>
+                <a class="fr-btn fr-btn--lg fr-icon-calculator-line fr-btn--icon-left" href="#simulateur">Tester mon éligibilité</a>
+              </li>
+              <li>
+                <a class="fr-btn fr-btn--lg fr-btn--secondary" href="#etapes">Comment ça marche</a>
+              </li>
+            </ul>
+          </div>
+          <div class="fr-col-12 fr-col-md-5 fr-text--center">
+            <img class="tt-hero__illustration" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/artwork/pictograms/map/location-france.svg" alt="" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMMENT ÇA MARCHE (F1) ===================== -->
+    <section id="etapes" class="fr-py-8w" aria-labelledby="tt-etapes-titre">
+      <div class="fr-container">
+        <h2 id="tt-etapes-titre">Comment ça marche</h2>
+        <p class="fr-text--lead tt-section-intro">Trois étapes simples, de la candidature à votre décision.</p>
+
+        <ol class="fr-grid-row fr-grid-row--gutters fr-mt-4w" style="list-style:none;padding:0;margin:0;">
+          <li class="fr-col-12 fr-col-md-4">
+            <div class="fr-p-3w">
+              <div class="fr-grid-row fr-grid-row--middle" style="gap:1rem;">
+                <span class="tt-step__num" aria-hidden="true">1</span>
+                <img class="tt-step__pictogram" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/artwork/pictograms/document/contract.svg" alt="" aria-hidden="true">
+              </div>
+              <h3 class="fr-h5 fr-mt-2w">Candidater</h3>
+              <p>Vérifiez votre éligibilité en moins d’une minute et indiquez le territoire qui vous intéresse.</p>
+            </div>
+          </li>
+          <li class="fr-col-12 fr-col-md-4">
+            <div class="fr-p-3w">
+              <div class="fr-grid-row fr-grid-row--middle" style="gap:1rem;">
+                <span class="tt-step__num" aria-hidden="true">2</span>
+                <img class="tt-step__pictogram" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/artwork/pictograms/buildings/house.svg" alt="" aria-hidden="true">
+              </div>
+              <h3 class="fr-h5 fr-mt-2w">Vivre l’immersion</h3>
+              <p>Séjournez 2 à 3 semaines sur place : logement, rencontres, services du quotidien, opportunités professionnelles.</p>
+            </div>
+          </li>
+          <li class="fr-col-12 fr-col-md-4">
+            <div class="fr-p-3w">
+              <div class="fr-grid-row fr-grid-row--middle" style="gap:1rem;">
+                <span class="tt-step__num" aria-hidden="true">3</span>
+                <img class="tt-step__pictogram" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/artwork/pictograms/leisure/community.svg" alt="" aria-hidden="true">
+              </div>
+              <h3 class="fr-h5 fr-mt-2w">Décider sereinement</h3>
+              <p>À l’issue du séjour, vous décidez en connaissance de cause. Aucune obligation de vous installer.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== MINI-SIMULATEUR (F2) ===================== -->
+    <section id="simulateur" class="fr-py-8w" style="background-color:var(--background-alt-blue-france);" aria-labelledby="tt-sim-titre">
+      <div class="fr-container">
+        <div class="fr-grid-row fr-grid-row--gutters">
+          <div class="fr-col-12 fr-col-lg-7">
+            <h2 id="tt-sim-titre">Suis-je éligible&nbsp;?</h2>
+            <p class="fr-text--lead tt-section-intro">
+              Répondez à 3 questions (la 4<sup>e</sup> est facultative) pour connaître immédiatement votre situation.
+              Aucune donnée n’est transmise à cette étape.
+            </p>
+
+            <form id="tt-simulateur" class="fr-mt-2w" novalidate>
+              <!-- Q1 -->
+              <fieldset class="fr-fieldset" aria-labelledby="tt-q1-legend">
+                <legend class="fr-fieldset__legend fr-text--regular" id="tt-q1-legend">
+                  <span class="fr-text--bold">1. Quelle est votre situation actuelle&nbsp;?</span>
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="q1-teletravail" name="statut" value="teletravail">
+                    <label class="fr-label" for="q1-teletravail">En télétravail ou activité salariée</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="q1-recherche" name="statut" value="recherche">
+                    <label class="fr-label" for="q1-recherche">En recherche d’emploi</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="q1-independant" name="statut" value="independant">
+                    <label class="fr-label" for="q1-independant">Indépendant·e ou en création d’activité</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="q1-autre" name="statut" value="autre">
+                    <label class="fr-label" for="q1-autre">Autre situation</label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Q2 -->
+              <fieldset class="fr-fieldset" aria-labelledby="tt-q2-legend">
+                <legend class="fr-fieldset__legend fr-text--regular" id="tt-q2-legend">
+                  <span class="fr-text--bold">2. Quel territoire vous intéresse&nbsp;?</span>
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="q2-ouvert" name="territoire" value="ouvert">
+                    <label class="fr-label" for="q2-ouvert">Un territoire de la liste partenaire (ouvert aux séjours)</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="q2-bientot" name="territoire" value="bientot">
+                    <label class="fr-label" for="q2-bientot">Un territoire bientôt partenaire</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="q2-horsliste" name="territoire" value="horsliste">
+                    <label class="fr-label" for="q2-horsliste">Un autre territoire, hors liste</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="q2-indecis" name="territoire" value="indecis">
+                    <label class="fr-label" for="q2-indecis">Je ne sais pas encore</label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Q3 -->
+              <fieldset class="fr-fieldset" aria-labelledby="tt-q3-legend">
+                <legend class="fr-fieldset__legend fr-text--regular" id="tt-q3-legend">
+                  <span class="fr-text--bold">3. Quelle durée de séjour envisagez-vous&nbsp;?</span>
+                </legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="q3-court" name="duree" value="court">
+                    <label class="fr-label" for="q3-court">Moins de 2 semaines</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="q3-23" name="duree" value="2-3">
+                    <label class="fr-label" for="q3-23">2 à 3 semaines <span class="fr-hint-text" style="display:inline;">(recommandé)</span></label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="q3-long" name="duree" value="long">
+                    <label class="fr-label" for="q3-long">Plus de 3 semaines</label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Q4 facultative -->
+              <div class="fr-select-group fr-mt-2w">
+                <label class="fr-label" for="q4-projet">
+                  4. Votre projet <span class="fr-hint-text">Facultatif — pour personnaliser votre réponse</span>
+                </label>
+                <select class="fr-select" id="q4-projet" name="projet">
+                  <option value="" selected>Sélectionnez une option</option>
+                  <option value="solo">Je teste seul·e</option>
+                  <option value="couple">Nous testons à deux</option>
+                  <option value="famille">Nous testons en famille (avec enfant·s)</option>
+                </select>
+              </div>
+
+              <div id="tt-sim-error" class="fr-mt-2w" aria-live="assertive"></div>
+
+              <div class="fr-btns-group fr-mt-3w">
+                <button type="submit" class="fr-btn fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right">Voir mon résultat</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Colonne résultat -->
+          <div class="fr-col-12 fr-col-lg-5">
+            <div class="fr-mt-4w fr-mt-lg-0" aria-live="polite">
+              <div id="tt-result" class="tt-result" hidden></div>
+              <div class="fr-callout" id="tt-result-placeholder">
+                <h3 class="fr-callout__title">Votre résultat s’affichera ici</h3>
+                <p class="fr-callout__text">
+                  Le moteur est volontairement transparent : selon votre statut, le territoire visé et la durée,
+                  vous serez orienté·e vers <strong>éligible</strong>, <strong>liste d’attente</strong>
+                  ou <strong>à vérifier par un conseiller</strong>. Dans tous les cas, vous pourrez laisser vos coordonnées.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DEUX PORTES (F3) ===================== -->
+    <section id="portes" class="fr-py-8w" aria-labelledby="tt-portes-titre">
+      <div class="fr-container">
+        <h2 id="tt-portes-titre">Comment participer&nbsp;?</h2>
+        <p class="fr-text--lead tt-section-intro">Le dispositif réunit deux profils. Choisissez le vôtre.</p>
+
+        <div class="fr-grid-row fr-grid-row--gutters fr-mt-2w">
+          <div class="fr-col-12 fr-col-md-6">
+            <div class="tt-porte fr-p-4w fr-enlarge-link">
+              <img class="tt-tile__pictogram" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/artwork/pictograms/digital/avatar.svg" alt="" aria-hidden="true">
+              <h3 class="fr-h5 fr-mt-3w">
+                <a href="#interet" data-porte="candidat">Je veux tester un territoire</a>
+              </h3>
+              <p class="fr-mb-0">Vous êtes un particulier prêt à vivre une immersion de 2 à 3 semaines pour vous projeter avant un éventuel changement de vie.</p>
+            </div>
+          </div>
+          <div class="fr-col-12 fr-col-md-6">
+            <div class="tt-porte fr-p-4w fr-enlarge-link">
+              <img class="tt-tile__pictogram" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/artwork/pictograms/buildings/city-hall.svg" alt="" aria-hidden="true">
+              <h3 class="fr-h5 fr-mt-3w">
+                <a href="#interet" data-porte="territoire">Mon territoire veut accueillir</a>
+              </h3>
+              <p class="fr-mb-0">Vous représentez une collectivité ou un territoire d’accueil et souhaitez proposer des séjours d’essai aux candidats.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CAPTURE EMAIL (F4) ===================== -->
+    <section id="interet" class="tt-capture fr-py-8w" aria-labelledby="tt-capture-titre">
+      <div class="fr-container">
+        <div class="fr-grid-row fr-grid-row--center">
+          <div class="fr-col-12 fr-col-md-8 fr-col-lg-7">
+            <h2 id="tt-capture-titre">Être recontacté·e</h2>
+            <p class="tt-section-intro">
+              Laissez votre adresse électronique : nous reviendrons vers vous pour la suite de votre démarche.
+              Une seule donnée vous est demandée, et uniquement avec votre accord.
+            </p>
+            <p id="tt-capture-contexte" class="fr-badge fr-badge--info fr-badge--no-icon fr-hidden"></p>
+
+            <div id="tt-capture-success" aria-live="polite" hidden></div>
+
+            <form id="tt-capture-form" class="fr-mt-2w" novalidate>
+              <input type="hidden" id="tt-type-porte" name="type_porte" value="candidat">
+              <input type="hidden" id="tt-resultat" name="resultat" value="">
+
+              <div class="fr-input-group" id="tt-email-group">
+                <label class="fr-label" for="tt-email">
+                  Adresse électronique
+                  <span class="fr-hint-text">Format attendu : <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abdbd9cec5c4c685c5c4c6ebced3cec6dbc7ce85cdd9">[email&#160;protected]</a></span>
+                </label>
+                <input class="fr-input" type="email" id="tt-email" name="email" autocomplete="email" aria-describedby="tt-email-error" required>
+                <p id="tt-email-error" class="fr-error-text" hidden></p>
+              </div>
+
+              <div class="fr-checkbox-group fr-mt-2w" id="tt-consent-group">
+                <input type="checkbox" id="tt-consent" name="consentement" aria-describedby="tt-consent-error">
+                <label class="fr-label" for="tt-consent">
+                  J’accepte d’être recontacté·e par l’équipe TerriTest au sujet du séjour d’essai territorial.
+                  <span class="fr-hint-text">Vous pourrez retirer votre consentement et demander la suppression de vos données à tout moment.</span>
+                </label>
+                <p id="tt-consent-error" class="fr-error-text" hidden></p>
+              </div>
+
+              <div class="fr-btns-group fr-mt-3w">
+                <button type="submit" class="fr-btn fr-icon-mail-line fr-btn--icon-left">Être recontacté·e</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ (F1) ===================== -->
+    <section id="faq" class="fr-py-8w" aria-labelledby="tt-faq-titre">
+      <div class="fr-container">
+        <div class="fr-grid-row fr-grid-row--center">
+          <div class="fr-col-12 fr-col-md-9 fr-col-lg-8">
+            <h2 id="tt-faq-titre">Questions fréquentes</h2>
+            <div class="fr-accordions-group fr-mt-2w">
+              <section class="fr-accordion">
+                <h3 class="fr-accordion__title">
+                  <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="faq-1">Le séjour d’essai m’engage-t-il à m’installer&nbsp;?</button>
+                </h3>
+                <div class="fr-collapse" id="faq-1">
+                  <p>Non. Le séjour d’essai est précisément conçu pour décider en connaissance de cause, sans aucune obligation d’installation à l’issue de l’immersion.</p>
+                </div>
+              </section>
+              <section class="fr-accordion">
+                <h3 class="fr-accordion__title">
+                  <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="faq-2">Combien de temps dure une immersion&nbsp;?</button>
+                </h3>
+                <div class="fr-collapse" id="faq-2">
+                  <p>La durée recommandée est de 2 à 3 semaines. C’est l’intervalle qui permet de découvrir réellement le quotidien d’un territoire : logement, services, vie locale et opportunités.</p>
+                </div>
+              </section>
+              <section class="fr-accordion">
+                <h3 class="fr-accordion__title">
+                  <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="faq-3">Que deviennent mes données&nbsp;?</button>
+                </h3>
+                <div class="fr-collapse" id="faq-3">
+                  <p>Seule votre adresse électronique est collectée, uniquement avec votre consentement explicite, afin de vous recontacter. Aucune donnée sensible n’est demandée. Vous pouvez à tout moment demander l’accès ou la suppression de vos données via le pied de page.</p>
+                </div>
+              </section>
+              <section class="fr-accordion">
+                <h3 class="fr-accordion__title">
+                  <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="faq-4">Je représente un territoire : comment se déclarer&nbsp;?</button>
+                </h3>
+                <div class="fr-collapse" id="faq-4">
+                  <p>Choisissez la porte «&nbsp;Mon territoire veut accueillir&nbsp;» puis laissez votre adresse. Nous reviendrons vers vous pour qualifier votre territoire et organiser l’accueil de candidats.</p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ PIED DE PAGE (F6) ============================ -->
+  <footer class="fr-footer" role="contentinfo" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand fr-enlarge-link">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">
+            <strong>TerriTest</strong> est un dispositif d’expérimentation. Ce site est une démonstration :
+            les règles d’éligibilité présentées sont des hypothèses d’illustration.
+          </p>
+          <ul class="fr-footer__content-list">
+            <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://legifrance.gouv.fr" target="_blank" rel="noopener external">legifrance.gouv.fr</a></li>
+            <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://service-public.fr" target="_blank" rel="noopener external">service-public.fr</a></li>
+            <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="https://gouvernement.fr" target="_blank" rel="noopener external">gouvernement.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fr-footer__bottom">
+        <ul class="fr-footer__bottom-list">
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Plan du site</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Accessibilité : non conforme</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Mentions légales</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Données personnelles</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Gestion des cookies</a></li>
+          <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Contact</a></li>
+        </ul>
+        <div class="fr-footer__bottom-copy">
+          <p>Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank" rel="noopener external">licence etalab-2.0</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts DSFR -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/dsfr.module.min.js"></script>
+  <script type="text/javascript" nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/dsfr.nomodule.min.js"></script>
+  <!-- Logique TerriTest -->
+  <script src="assets/simulateur.js"></script>
+</body>
+</html>
