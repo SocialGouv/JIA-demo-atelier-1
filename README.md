@@ -9,14 +9,33 @@ Dépôt de démonstration (atelier). Objectif : partir de **retours terrain** et
 
 - [investigation-terrain-territest.md](investigation-terrain-territest.md) — matériau brut d'investigation (5 entretiens terrain).
 - **Ce README** — la spec macro d'implémentation du MVP (ci-dessous).
+- [`maquette/`](maquette/) — maquette HTML/DSFR statique ayant servi de référence visuelle.
+- [`src/`](src/) — l'application **Vite + React** (la landing implémentée).
 
 | Étape | Statut |
 |-------|--------|
 | Investigation terrain | ✅ fait |
 | **Spec macro (ce document)** | ✅ fait |
-| Maquette / design DSFR | ⬜ à venir |
+| Maquette / design DSFR | ✅ fait |
+| Landing fonctionnelle (Vite + React) | ✅ fait |
 | Découpage en tickets | ⬜ à venir |
-| PR → landing page fonctionnelle | ⬜ à venir |
+
+## Démarrer l'application
+
+```bash
+npm install
+npm run dev      # serveur de développement (http://localhost:5173)
+npm run build    # build de production dans dist/
+npm run preview  # prévisualise le build de production
+```
+
+**Stack :** [Vite](https://vite.dev) + React + TypeScript, DSFR via [`@codegouvfr/react-dsfr`](https://react-dsfr.codegouv.studio).
+
+> **Note d'implémentation.** La spec ci-dessous recommandait Next.js (SSG). Pour le MVP, on a
+> retenu **Vite + React** : plus léger et plus rapide à mettre en place pour une landing
+> essentiellement statique, tout en gardant `@codegouvfr/react-dsfr` (donc le même socle DSFR/RGAA).
+> Le moteur d'éligibilité ([`src/lib/eligibilite.ts`](src/lib/eligibilite.ts)) et l'instrumentation
+> funnel ([`src/lib/funnel.ts`](src/lib/funnel.ts), stub à brancher sur Matomo) sont isolés et testables.
 
 ---
 

@@ -1,0 +1,26 @@
+{
+  "name": "territest-landing",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "TerriTest — landing page du séjour d'essai territorial (dispositif fictif, démo atelier). Vite + React + @codegouvfr/react-dsfr.",
+  "scripts": {
+    "predev": "react-dsfr update-icons",
+    "dev": "vite",
+    "prebuild": "react-dsfr update-icons",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@codegouvfr/react-dsfr": "^1.32.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.16",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16"
+  }
+}

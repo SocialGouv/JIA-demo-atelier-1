@@ -1,0 +1,69 @@
+/* TerriTest — styles complémentaires au DSFR (minimal, tokens DSFR uniquement).
+   Porté depuis la maquette (maquette/assets/custom.css). */
+
+/* Hero */
+.tt-hero {
+  background-color: var(--background-alt-blue-france);
+}
+.tt-hero__illustration {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+/* Pastilles numérotées « Comment ça marche » */
+.tt-step__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--background-action-high-blue-france);
+  color: var(--text-inverted-blue-france);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.tt-step__pictogram {
+  height: 80px;
+  width: auto;
+}
+
+/* Pictogrammes des tuiles / portes */
+.tt-tile__pictogram {
+  height: 96px;
+  width: auto;
+}
+
+/* Les deux portes (F3) — bloc cliquable conforme, bordure via token DSFR */
+.tt-porte {
+  height: 100%;
+  border: 1px solid var(--border-default-grey);
+  border-radius: 0;
+  transition:
+    border-color 0.2s,
+    background-color 0.2s;
+}
+.tt-porte:hover {
+  border-color: var(--border-active-blue-france);
+  background-color: var(--background-alt-blue-france);
+}
+.tt-porte .tt-tile__pictogram {
+  display: block;
+}
+
+/* Bloc capture : léger liseré pour le mettre en avant sans CSS « maison » concurrent */
+.tt-capture {
+  background-color: var(--background-alt-grey);
+}
+
+/* Simulateur : fond bleu France clair */
+.tt-simulateur {
+  background-color: var(--background-alt-blue-france);
+}
+
+/* Petit confort de lecture sur les intros de section */
+.tt-section-intro {
+  max-width: 42rem;
+}
