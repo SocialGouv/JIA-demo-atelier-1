@@ -167,14 +167,154 @@
       </div>
     </section>
 
-    <!-- Auto-diagnostic : emplacement réservé, rempli par l'itération suivante (#16) -->
+    <!-- Auto-diagnostic interactif (#16) — calcul 100 % navigateur, aucune donnée envoyée -->
     <section id="diagnostic" class="section">
       <div class="fr-container">
         <h2>Auto-diagnostic de vulnérabilité</h2>
-        <p class="fr-text--lead">Évaluez votre niveau de risque en 6 questions. Calcul dans votre navigateur, aucune donnée envoyée ni conservée.</p>
-        <div class="fr-callout">
-          <p class="fr-callout__text">Le questionnaire interactif est intégré dans la prochaine itération du produit.</p>
-        </div>
+        <p class="fr-text--lead">Évaluez votre niveau de risque en 6 questions. Le calcul se fait dans votre navigateur : aucune donnée n'est envoyée ni conservée.</p>
+
+        <form id="diagnostic-form" novalidate>
+          <div class="fr-grid-row fr-grid-row--gutters">
+            <div class="fr-col-12 fr-col-md-6">
+              <fieldset class="fr-fieldset" id="q-age" aria-labelledby="q-age-legend">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="q-age-legend">1. Quel est votre âge ?</legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="age-1" name="age" value="0">
+                    <label class="fr-label" for="age-1">Moins de 65 ans</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="age-2" name="age" value="2">
+                    <label class="fr-label" for="age-2">65 à 74 ans</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="age-3" name="age" value="3">
+                    <label class="fr-label" for="age-3">75 ans ou plus</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="fr-col-12 fr-col-md-6">
+              <fieldset class="fr-fieldset" id="q-logement" aria-labelledby="q-logement-legend">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="q-logement-legend">2. Votre logement reste-t-il frais ?</legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="logement-1" name="logement" value="0">
+                    <label class="fr-label" for="logement-1">Bien isolé, une pièce reste fraîche</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="logement-2" name="logement" value="2">
+                    <label class="fr-label" for="logement-2">Sous les toits ou mal isolé</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="logement-3" name="logement" value="3">
+                    <label class="fr-label" for="logement-3">Aucune pièce ne reste fraîche</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="fr-col-12 fr-col-md-6">
+              <fieldset class="fr-fieldset" id="q-seul" aria-labelledby="q-seul-legend">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="q-seul-legend">3. Vivez-vous seul·e ?</legend>
+                <div class="fr-fieldset__element fr-fieldset__element--inline">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="seul-1" name="seul" value="2">
+                    <label class="fr-label" for="seul-1">Oui, je vis seul·e</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element fr-fieldset__element--inline">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="seul-2" name="seul" value="0">
+                    <label class="fr-label" for="seul-2">Non, je suis entouré·e</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="fr-col-12 fr-col-md-6">
+              <fieldset class="fr-fieldset" id="q-patho" aria-labelledby="q-patho-legend">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="q-patho-legend">4. Pathologie chronique ou traitement régulier ?</legend>
+                <div class="fr-fieldset__element fr-fieldset__element--inline">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="patho-1" name="patho" value="2">
+                    <label class="fr-label" for="patho-1">Oui</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element fr-fieldset__element--inline">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="patho-2" name="patho" value="0">
+                    <label class="fr-label" for="patho-2">Non</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="fr-col-12 fr-col-md-6">
+              <fieldset class="fr-fieldset" id="q-expo" aria-labelledby="q-expo-legend">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="q-expo-legend">5. Êtes-vous exposé·e à la chaleur (travail extérieur, sport) ?</legend>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="expo-1" name="expo" value="2">
+                    <label class="fr-label" for="expo-1">Régulièrement</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="expo-2" name="expo" value="1">
+                    <label class="fr-label" for="expo-2">Parfois</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="expo-3" name="expo" value="0">
+                    <label class="fr-label" for="expo-3">Non, jamais</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="fr-col-12 fr-col-md-6">
+              <fieldset class="fr-fieldset" id="q-enfant" aria-labelledby="q-enfant-legend">
+                <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="q-enfant-legend">6. Enfant de moins de 6 ans au foyer ?</legend>
+                <div class="fr-fieldset__element fr-fieldset__element--inline">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="enfant-1" name="enfant" value="2">
+                    <label class="fr-label" for="enfant-1">Oui</label>
+                  </div>
+                </div>
+                <div class="fr-fieldset__element fr-fieldset__element--inline">
+                  <div class="fr-radio-group">
+                    <input type="radio" id="enfant-2" name="enfant" value="0">
+                    <label class="fr-label" for="enfant-2">Non</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div id="diagnostic-error" class="fr-messages-group fr-mb-2w" aria-live="assertive"></div>
+
+          <ul class="fr-btns-group fr-btns-group--inline-md">
+            <li>
+              <button type="submit" class="fr-btn fr-btn--lg">Voir mon résultat</button>
+            </li>
+            <li>
+              <button type="reset" class="fr-btn fr-btn--lg fr-btn--secondary">Réinitialiser</button>
+            </li>
+          </ul>
+        </form>
+
+        <div id="diagnostic-result" class="fr-mt-4w"></div>
       </div>
     </section>
   </main>

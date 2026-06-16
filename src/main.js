@@ -6,3 +6,9 @@ import '@gouvfr/dsfr/dist/dsfr.module.min.js'
 
 // Surcharges légères propres à la landing.
 import './style.css'
+
+// Auto-diagnostic de vulnérabilité (logique 100 % client).
+import { initDiagnostic } from './diagnostic.js'
+
+// Les modules ES sont différés : le DOM est prêt à l'exécution.
+initDiagnostic()
