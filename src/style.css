@@ -24,3 +24,42 @@
   text-transform: uppercase;
   color: var(--text-action-high-blue-france);
 }
+
+.hero__meta {
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
+  color: var(--text-mention-grey);
+}
+
+/* Gestes essentiels — cartes illustrées (tokens DSFR), alignées sur la maquette */
+.geste {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+}
+
+.geste__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--text-action-high-blue-france);
+  background-color: var(--background-action-low-blue-france);
+}
+
+.geste__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.geste__desc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-mention-grey);
+}

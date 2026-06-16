@@ -67,6 +67,19 @@
     </div>
   </header>
 
+  <!-- Bandeau vigilance météo (statique pour la démo — pas d'API temps réel) -->
+  <div class="fr-notice fr-notice--weather-orange">
+    <div class="fr-container">
+      <div class="fr-notice__body">
+        <p>
+          <span class="fr-notice__title">Vigilance canicule orange</span>
+          <span class="fr-notice__desc">Pic de chaleur attendu cette semaine — redoublez de prudence.</span>
+          <a title="Vigilance Météo-France — nouvelle fenêtre" href="https://vigilance.meteofrance.fr" target="_blank" rel="noopener external" class="fr-notice__link">Consulter la vigilance Météo-France</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
   <main id="contenu" role="main">
     <!-- Hero -->
     <section class="section hero">
@@ -78,12 +91,13 @@
             <p class="fr-text--lead">L'information de référence de l'État pour traverser la canicule en sécurité, où que vous soyez.</p>
             <ul class="fr-btns-group fr-btns-group--inline-md">
               <li>
-                <a class="fr-btn fr-btn--lg fr-icon-arrow-right-line fr-btn--icon-right" href="#diagnostic">Évaluer mon risque</a>
+                <a class="fr-btn fr-btn--lg" href="#diagnostic">Évaluer mon risque</a>
               </li>
               <li>
                 <a class="fr-btn fr-btn--lg fr-btn--secondary" href="#gestes">Voir les gestes essentiels</a>
               </li>
             </ul>
+            <p class="hero__meta">Mis à jour quotidiennement&nbsp;· données Météo-France</p>
           </div>
         </div>
       </div>
@@ -95,64 +109,58 @@
         <h2>Les gestes essentiels</h2>
         <p class="fr-text--lead">Simples, mais à appliquer vraiment — surtout aux heures les plus chaudes.</p>
         <div class="fr-grid-row fr-grid-row--gutters">
-          <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-            <div class="fr-tile fr-tile--sm">
-              <div class="fr-tile__body">
-                <div class="fr-tile__content">
-                  <h3 class="fr-tile__title">Boire de l'eau régulièrement</h3>
-                  <p class="fr-tile__desc">Sans attendre la soif, environ 1,5&nbsp;L par jour.</p>
-                </div>
-              </div>
+          <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4">
+            <div class="geste">
+              <span class="geste__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11Z"/></svg>
+              </span>
+              <h3 class="geste__title">Boire de l'eau régulièrement</h3>
+              <p class="geste__desc">Sans attendre la soif, environ 1,5&nbsp;L par jour.</p>
             </div>
           </div>
-          <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-            <div class="fr-tile fr-tile--sm">
-              <div class="fr-tile__body">
-                <div class="fr-tile__content">
-                  <h3 class="fr-tile__title">Fermer volets et fenêtres le jour</h3>
-                  <p class="fr-tile__desc">Aérer la nuit, fermer dès 10&nbsp;h.</p>
-                </div>
-              </div>
+          <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4">
+            <div class="geste">
+              <span class="geste__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16"/><path d="M12 4v16M4 12h16"/></svg>
+              </span>
+              <h3 class="geste__title">Fermer volets et fenêtres le jour</h3>
+              <p class="geste__desc">Aérer la nuit, fermer dès 10&nbsp;h.</p>
             </div>
           </div>
-          <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-            <div class="fr-tile fr-tile--sm">
-              <div class="fr-tile__body">
-                <div class="fr-tile__content">
-                  <h3 class="fr-tile__title">Trouver un lieu frais</h3>
-                  <p class="fr-tile__desc">Mairie, médiathèque, centre commercial.</p>
-                </div>
-              </div>
+          <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4">
+            <div class="geste">
+              <span class="geste__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+              </span>
+              <h3 class="geste__title">Trouver un lieu frais</h3>
+              <p class="geste__desc">Mairie, médiathèque, centre commercial.</p>
             </div>
           </div>
-          <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-            <div class="fr-tile fr-tile--sm">
-              <div class="fr-tile__body">
-                <div class="fr-tile__content">
-                  <h3 class="fr-tile__title">Surveiller ses proches</h3>
-                  <p class="fr-tile__desc">Un appel par jour aux plus fragiles.</p>
-                </div>
-              </div>
+          <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4">
+            <div class="geste">
+              <span class="geste__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9.5" r="2.3"/><path d="M3.5 20c0-3.3 2.8-5 5.5-5s5.5 1.7 5.5 5"/></svg>
+              </span>
+              <h3 class="geste__title">Surveiller ses proches</h3>
+              <p class="geste__desc">Un appel par jour aux plus fragiles.</p>
             </div>
           </div>
-          <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-            <div class="fr-tile fr-tile--sm">
-              <div class="fr-tile__body">
-                <div class="fr-tile__content">
-                  <h3 class="fr-tile__title">Éviter l'effort aux heures chaudes</h3>
-                  <p class="fr-tile__desc">Pas de sport ni de travail dur entre 12&nbsp;h et 16&nbsp;h.</p>
-                </div>
-              </div>
+          <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4">
+            <div class="geste">
+              <span class="geste__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <h3 class="geste__title">Éviter l'effort aux heures chaudes</h3>
+              <p class="geste__desc">Pas de sport ni de travail dur entre 12&nbsp;h et 16&nbsp;h.</p>
             </div>
           </div>
-          <div class="fr-col-12 fr-col-sm-6 fr-col-md-4">
-            <div class="fr-tile fr-tile--sm">
-              <div class="fr-tile__body">
-                <div class="fr-tile__content">
-                  <h3 class="fr-tile__title">Rafraîchir son corps</h3>
-                  <p class="fr-tile__desc">Douche, brumisateur, linge humide sur la peau.</p>
-                </div>
-              </div>
+          <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4">
+            <div class="geste">
+              <span class="geste__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="4" rx="2"/><path d="M9 10v5M12 10v6M15 10v5"/></svg>
+              </span>
+              <h3 class="geste__title">Rafraîchir son corps</h3>
+              <p class="geste__desc">Douche, brumisateur, linge humide sur la peau.</p>
             </div>
           </div>
         </div>
